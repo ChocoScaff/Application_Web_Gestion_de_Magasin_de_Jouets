@@ -1,13 +1,27 @@
 <?php
-header('Content-Type: application/json');
-require_once 'db.php';
+include 'db.php';
 
-try {
-    $conn = connectDB();
-    $stmt = $conn->query("SELECT id_client, nom, prenom, email, telephone FROM Client ORDER BY nom, prenom");
-    $clients = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo json_encode($clients);
-} catch (PDOException $e) {
-    http_response_code(500);
-    echo json_encode(['error' => 'Erreur lors de la récupération des clients']);
+// Ajouter un client
+function ajouterClient($nom, $prenom, $email, $adresse, $telephone)
+{
+    global $pdo;
+    $stmt = $pdo->prepare("INSERT INTO Client (nom, prenom, email, adresse, telephone) VALUES (?, ?, ?, ?, ?)");
+    $stmt->execute([$nom, $prenom, $email, $adresse, $telephone]);
 }
+
+// Modifier un client
+function modifierClient($id, $nom, $prenom, $email, $adresse, $telephone)
+{
+    global $pdo;
+    $stmt = $pdo->prepare("UPDATE Client SET nom = ?, prenom = ?, email = ?, adresse = ?, telephone = ? WHERE id = ?");
+    $stmt->execute([$nom, $prenom, $email, $adresse, $telephone, $id]);
+}
+
+// Récupérer tous les clients
+function getClients()
+{
+    global $pdo;
+    $stmt = $pdo->query("SELECT * FROM client");
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+?>

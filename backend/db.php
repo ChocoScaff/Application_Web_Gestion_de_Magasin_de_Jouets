@@ -1,27 +1,28 @@
 <?php
-$servername = 'localhost';
-$userrname = 'root';
-$password = '';
-$dbname = 'MagasinJouet';  // Correction : suppression de l'espace et respect de la casse
+// db.php
 
-$conn = new mysqli($servername, $userrname, $password, $dbname);
+// Configuration des paramètres de connexion
+$host = 'localhost';        // Adresse du serveur
+$dbname = 'magasin_jouets'; // Nom de la base de données
+$username = 'root';         // Nom d'utilisateur
+$password = '';             // Mot de passe (vide par défaut sur XAMPP)
 
-if ($conn->connect_error) {
-    die('Erreur de connexion a la base de donnee : ' . $conn->connect_error );
+// Connexion avec PDO (recommandé pour une meilleure sécurité et flexibilité)
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    // Enregistre l'erreur dans les logs et affiche un message utilisateur
+    error_log("Erreur de connexion PDO : " . $e->getMessage());
+    die("Erreur : Impossible de se connecter à la base de données.");
 }
 
-function connectDB() {
-    $host = "localhost";
-    $dbname = "MagasinJouet";  // Correction : suppression de l'espace et respect de la casse
-    $username = "root";
-    $password = "";
+// Connexion avec MySQLi (optionnelle, seulement si nécessaire)
+$conn = mysqli_connect($host, $username, $password, $dbname);
 
-    try {
-        $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $conn;
-    } catch (PDOException $e) {
-        die("Erreur de connexion à la base de données : " . $e->getMessage());
-    }
+// Vérification de la connexion MySQLi
+if (!$conn) {
+    error_log("Erreur de connexion MySQLi : " . mysqli_connect_error());
+    die("Erreur : Impossible de se connecter à la base de données.");
 }
 ?>

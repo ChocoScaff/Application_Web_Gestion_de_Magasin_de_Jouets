@@ -1,22 +1,24 @@
 <?php
-// fournisseurs.php : Gestion des fournisseurs
-include 'config.php';
+include 'db.php';
 
 // Ajouter un fournisseur
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter_fournisseur'])) {
-    $nom = $_POST['nom'];
-    $contact = $_POST['contact'];
-
-    $stmt = $pdo->prepare("INSERT INTO fournisseurs (nom, contact) VALUES (?, ?)");
-    $stmt->execute([$nom, $contact]);
-    echo "Fournisseur ajouté avec succès.";
+function ajouterFournisseur($nom, $email, $telephone, $adresse) {
+    global $pdo;
+    $stmt = $pdo->prepare("INSERT INTO Fournisseur (nom, email, telephone, adresse) VALUES (?, ?, ?, ?)");
+    $stmt->execute([$nom, $email, $telephone, $adresse]);
 }
 
-// Afficher les fournisseurs
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $stmt = $pdo->query("SELECT * FROM fournisseurs");
-    $fournisseurs = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo json_encode($fournisseurs);
+// Modifier un fournisseur
+function modifierFournisseur($id, $nom, $email, $telephone, $adresse) {
+    global $pdo;
+    $stmt = $pdo->prepare("UPDATE Fournisseur SET nom = ?, email = ?, telephone = ?, adresse = ? WHERE id = ?");
+    $stmt->execute([$nom, $email, $telephone, $adresse, $id]);
 }
 
+// Récupérer tous les fournisseurs
+function getFournisseurs() {
+    global $pdo;
+    $stmt = $pdo->query("SELECT * FROM Fournisseur");
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
