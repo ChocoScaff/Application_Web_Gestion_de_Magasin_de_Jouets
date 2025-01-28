@@ -25,7 +25,7 @@
         <li><a href='commandes.php'>Commande</a></li>
         <li><a href='config.php'>config</a></li>
         <li><a href='fournisseur.php'>Fournisseur</a></li>
-        <li><a href='jouet.php'>jouet</a></li>
+        <li><a href='jouets.php'>jouet</a></li>
    
     </ul>
 </nav>

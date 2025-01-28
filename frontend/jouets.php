@@ -24,19 +24,37 @@
         <li><a href='clients.php'>Client</a></li>
         <li><a href='commandes.php'>Commande</a></li>
         <li><a href='config.php'>config</a></li>
-        <li><a href='fournisseur.php'>Fournisseur</a></li>
-        <li><a href='jouet.php'>jouet</a></li>
+        <li><a href='fournisseurs.php'>Fournisseur</a></li>
+        <li><a href='jouets.php'>jouet</a></li>
    
     </ul>
 </nav>
 
-    <table border="1">
-        <tr>
-            <th>Nom</th>
-            <th>marque</th>
-            <th>prix</th>
-        </tr>
+</nav>
 
+<table border="1">
+    <tr>
+        <th>Nom</th>
+        <th>Marque</th>
+        <th>Prix</th>
+    </tr>
 
+    <?php
+    include 'db.php';
+
+    $conn = connectDB();
+    if ($conn) {
+        $stmt = $conn->query("SELECT nom, marque, prix FROM Jouet");
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr>";
+            echo "<td>" . htmlspecialchars($row['nom']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['marque']) . "</td>";
+            echo "<td>" . htmlspecialchars($row['prix']) . " €</td>";
+            echo "</tr>";
+        }
+    }
+    ?>
+
+</table>
 
 </body>
