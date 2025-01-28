@@ -1,49 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Table</title>
+    <title>Liste des jouets</title>
     <link rel='stylesheet' href='../assets/css/style.css'>
     <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
+        table, th, td { border: 1px solid black; }
     </style>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <title>Liste</title>
 </head>
-
 <body>
-<h1> liste des jouets </h1>
+    <h1>Liste des jouets</h1>
+    <?php include 'nav.php'; ?>
+    
+    <table border="1">
+        <tr>
+            <th>Nom</th>
+            <th>Marque</th>
+            <th>Prix</th>
+        </tr>
+        <tbody id="jouets-list"></tbody>
+    </table>
 
-<?php include 'nav.php'; ?>
-
-<table border="1">
-    <tr>
-        <th>Nom</th>
-        <th>Marque</th>
-        <th>Prix</th>
-    </tr>
-
-    <?php
-    include 'db.php';
-
-    $conn = connectDB();
-    if ($conn) {
-        $stmt = $conn->query("SELECT nom, marque, prix FROM Jouet");
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            echo "<tr>";
-            echo "<td>" . htmlspecialchars($row['nom']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['marque']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['prix']) . " €</td>";
-            echo "</tr>";
-        }
-    }
-    ?>
-
-</table>
-
+    <script>
+        fetch('../backend/jouets.php')
+            .then(response => response.json())
+            .then(jouets => {
+                const tbody = document.getElementById('jouets-list');
+                jouets.forEach(jouet => {
+                    tbody.innerHTML += `
+                        <tr>
+                            <td>${jouet.nom}</td>
+                            <td>${jouet.marque}</td>
+                            <td>${jouet.prix} €</td>
+                        </tr>
+                    `;
+                });
+            })
+            .catch(error => console.error('Erreur:', error));
+    </script>
 </body>
+</html>
