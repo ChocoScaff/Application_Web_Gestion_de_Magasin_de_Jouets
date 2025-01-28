@@ -19,16 +19,7 @@
 <body>
 <h1> liste des fournisseurs </h1>
 
-<nav>
-    <ul>
-        <li><a href='clients.php'>Client</a></li>
-        <li><a href='commandes.php'>Commande</a></li>
-        <li><a href='config.php'>config</a></li>
-        <li><a href='fournisseur.php'>Fournisseur</a></li>
-        <li><a href='jouets.php'>jouet</a></li>
-   
-    </ul>
-</nav>
+<?php include 'nav.php'; ?>
 
     <table border="1">
         <tr>
