@@ -1,6 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\tp-php\backend\clients.php';
-include 'C:\xampp\htdocs\tp-php\frontend\includes\header.php';
+include '../../backend\clients.php';
+include '../includes\header.php';
 
 function getClientById($id) {
     global $pdo;
@@ -37,4 +37,4 @@ if (isset($_GET['id'])) {
 <?php else: ?>
 <p>Client introuvable.</p>
 <?php endif; ?>
-<?php include 'C:\xampp\htdocs\tp-php\frontend\includes\footer.php'; ?>
+<?php include '../includes\footer.php'; ?>

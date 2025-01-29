@@ -1,6 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\tp-php\frontend\includes\header.php';
-include 'C:\xampp\htdocs\tp-php\backend\jouets.php';
+include '../includes/header.php';
+include '../../backend/jouets.php';
 ?>
 <link rel="stylesheet" href="../../assets/styles.css">
 
@@ -31,5 +31,5 @@ include 'C:\xampp\htdocs\tp-php\backend\jouets.php';
 </section>
 
 <?php
-include 'C:\xampp\htdocs\tp-php\frontend\includes\footer.php';
+include '../includes/footer.php';
 ?>

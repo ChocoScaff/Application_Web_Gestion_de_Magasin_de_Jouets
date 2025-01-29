@@ -1,6 +1,5 @@
 <?php
 include 'db.php';
-
 // Ajouter un client
 function ajouterClient($nom, $prenom, $email, $adresse, $telephone)
 {
@@ -21,7 +20,11 @@ function modifierClient($id, $nom, $prenom, $email, $adresse, $telephone)
 function getClients()
 {
     global $pdo;
-    $stmt = $pdo->query("SELECT * FROM client");
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    try {
+        $stmt = $pdo->query("SELECT * FROM Client"); // Vérifie la casse correcte
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        die("Erreur SQL : " . $e->getMessage()); // Affiche l'erreur SQL
+    }
 }
 ?>
