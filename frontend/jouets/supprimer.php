@@ -19,7 +19,7 @@ if (!$jouet) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm'])) {
     supprimerJouet($id);
     echo "<p style='color:green;'>Jouet supprimé avec succès !</p>";
-    echo "<a href='/tp-php/frontend/jouets/afficher.php'>Retour à la liste des jouets</a>";
+    echo "<a href='/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/jouets/afficher.php'>Retour à la liste des jouets</a>";
     exit;
 }
 ?>
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm'])) {
 
 <form method="post">
     <button type="submit" name="confirm" value="1">Oui, Supprimer</button>
-    <a href="/tp-php/frontend/jouets/afficher.php">Annuler</a>
+    <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/jouets/afficher.php">Annuler</a>
 </form>
 
 <?php include '../includes/footer.php'; ?>

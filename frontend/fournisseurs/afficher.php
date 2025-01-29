@@ -1,6 +1,6 @@
 <?php
-include '../..\backend\fournisseurs.php';
-include '..\includes\header.php';
+include '../../backend/fournisseurs.php';
+include '../includes/header.php';
 ?>
 <link rel="stylesheet" href="..\..\assets\css\styles.css">
 
@@ -29,4 +29,4 @@ $fournisseurs = getFournisseurs();
         </tr>
     <?php endforeach; ?>
 </table>
-<?php include 'C:\xampp\htdocs\tp-php\frontend\includes\footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

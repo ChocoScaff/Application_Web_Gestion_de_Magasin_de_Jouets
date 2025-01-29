@@ -6,13 +6,15 @@ include 'includes\header.php';
 <!DOCTYPE html>
 <html lang="fr">
 
+<link rel="stylesheet" href="../assets/styles.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magasin de Jouets</title>
-    <link rel="stylesheet" href="../assets/styles.css">
     <script src="../assets/script.js"></script>
 </head>
+
 
 <body>
     <main>

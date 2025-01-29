@@ -1,6 +1,6 @@
 <?php
-include '../../backend\\commandes.php';
-include '../includes\\header.php';
+include '../../backend/commandes.php';
+include '../includes/header.php';
 
 $commandes = getCommandes(); // Récupérer toutes les commandes
 ?>
@@ -23,4 +23,4 @@ $commandes = getCommandes(); // Récupérer toutes les commandes
     <?php endforeach; ?>
 </table>
 
-<?php include '..\\includes\\footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
