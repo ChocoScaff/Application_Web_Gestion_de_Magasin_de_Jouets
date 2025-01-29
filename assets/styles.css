@@ -3,6 +3,7 @@
     --primary-color: #1E3A8A; /* Bleu foncé */
     --primary-dark: #162B6F; /* Bleu plus sombre */
     --secondary-color: #0EA5E9; /* Cyan moderne */
+    --accent-color: #FACC15; /* Jaune vif pour les accents */
     --text-color: #333;
     --background-light: #F3F4F6; /* Gris clair */
     --white: #ffffff;
@@ -12,7 +13,7 @@
     --transition: all 0.3s ease-in-out;
 }
 
-/* Styles généraux */
+/* 🌐 Styles généraux */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-light);
@@ -24,7 +25,7 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER */
+/* 🔹 HEADER */
 header {
     background: var(--primary-color);
     box-shadow: var(--shadow);
@@ -38,11 +39,11 @@ header h1 {
     font-size: 2rem;
 }
 
-/* NAVIGATION */
+/* 🔹 NAVIGATION */
 nav {
     background-color: var(--primary-dark);
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     box-shadow: var(--shadow);
 }
 
@@ -52,7 +53,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav ul li {
@@ -63,17 +64,17 @@ nav ul li a {
     color: var(--white);
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 15px;
+    padding: 12px 18px;
     border-radius: 5px;
     transition: var(--transition);
 }
 
 nav ul li a:hover {
-    background-color: var(--white);
+    background-color: var(--accent-color);
     color: var(--primary-dark);
 }
 
-/* MENU DÉROULANT */
+/* 🛠 MENU DÉROULANT */
 .dropdown {
     position: relative;
 }
@@ -130,7 +131,12 @@ nav ul li a:hover {
     transform: translateY(0);
 }
 
-/* MAIN */
+/* 📌 ESPACEMENT SOUS LA NAVBAR */
+header {
+    margin-bottom: 30px; /* Ajoute de l’espace sous la navbar */
+}
+
+/* 📜 MAIN */
 main {
     flex: 1;
     max-width: 1100px;
@@ -138,12 +144,12 @@ main {
     padding: 20px;
 }
 
-/* SECTIONS */
+/* 📦 SECTIONS */
 section {
     background: var(--white);
     border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 30px;
+    margin-bottom: 30px;
     box-shadow: var(--shadow);
     transition: var(--transition);
     text-align: center;
@@ -158,7 +164,7 @@ section h2 {
     margin-bottom: 15px;
 }
 
-/* LIENS */
+/* 📎 LIENS */
 a {
     color: var(--secondary-color);
     text-decoration: none;
@@ -169,12 +175,12 @@ a:hover {
     color: var(--primary-dark);
 }
 
-/* BOUTONS */
+/* 🔘 BOUTONS */
 button, .btn {
     background-color: var(--secondary-color);
     color: var(--white);
     border: none;
-    padding: 10px 15px;
+    padding: 12px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -185,39 +191,65 @@ button:hover, .btn:hover {
     background-color: var(--primary-dark);
 }
 
-/* FORMULAIRES */
+/* ✏️ FORMULAIRES */
 form {
     max-width: 500px;
-    margin: 20px auto;
+    margin: 40px auto;
     background: var(--white);
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
 }
 
+/* Labels */
 form label {
-    display: block;
-    margin-bottom: 8px;
     font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
 }
 
-form input,
+/* Champs */
 form select,
-form textarea {
+form input[type="text"],
+form input[type="number"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid var(--gray);
     border-radius: 5px;
+    font-size: 16px;
 }
 
-form input:focus,
-form select:focus,
-form textarea:focus {
-    border-color: var(--primary-color);
+/* Jouets et Quantités */
+.jouet-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-/* TABLES */
+/* Style du bouton */
+form button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    text-transform: uppercase;
+}
+
+form button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* 🗂 TABLES */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -248,7 +280,7 @@ tr:hover {
     background-color: var(--gray);
 }
 
-/* FOOTER TOUJOURS EN BAS */
+/* 🔚 FOOTER TOUJOURS EN BAS */
 footer {
     background-color: var(--text-color);
     color: var(--white);
@@ -259,7 +291,7 @@ footer {
     position: relative;
 }
 
-/* RESPONSIVE */
+/* 📱 RESPONSIVE */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -282,60 +314,4 @@ footer {
     .dropdown-content {
         min-width: 100%;
     }
-}
-
-/* Espacement sous la navbar */
-header {
-    margin-bottom: 20px; /* Ajoute de l’espace sous la navbar */
-}
-
-/* Centrage et amélioration du formulaire */
-form {
-    max-width: 450px;
-    margin: 40px auto; /* Ajoute plus d’espace */
-    background: var(--white);
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Ajout d'un meilleur alignement des labels */
-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    width: 100%;
-    text-align: left;
-}
-
-/* Champs d’entrée */
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px; /* Espacement amélioré */
-    border: 1px solid var(--gray);
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Amélioration du bouton */
-form button {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: var(--transition);
-    width: 100%;
-    text-transform: uppercase;
-}
-
-form button:hover {
-    background-color: var(--primary-dark);
 }
