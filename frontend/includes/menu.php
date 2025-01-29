@@ -3,7 +3,7 @@
 ?>
 <nav>
     <ul>
-        <li><a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/index.php">Accueil</a></li>
+        <li><a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/index.php" class="dropbtn" >Accueil</a></li>
 
         <li class="dropdown">
             <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/jouets/afficher.php" class="dropbtn">Jouets</a>
