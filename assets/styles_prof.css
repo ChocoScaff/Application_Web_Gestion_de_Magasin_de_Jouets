@@ -152,35 +152,3 @@ p {
     font-weight: bold;
 }
 
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--white);
-    min-width: 200px;
-    box-shadow: var(--shadow);
-    border-radius: 4px;
-    z-index: 1000;
-    padding: 0.5rem 0;
-    top: 100%;
-    left: 0;
-}
-
-.dropdown-content a {
-    color: var(--text-color);
-    padding: 0.8rem 1rem;
-    display: block;
-    transition: var(--transition);
-}
-
-.dropdown-content a:hover {
-    background-color: var(--gray-light);
-}
-
-/* Affichage du dropdown au survol */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
