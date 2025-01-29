@@ -1,0 +1,84 @@
+/* Styles du menu */
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    transition: var(--transition);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+}
+
+/* Liens du menu */
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+/* Changement de couleur au survol */
+nav ul li a:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Style du menu déroulant */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 0.8rem 1rem;
+    display: block;
+    transition: var(--transition);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--gray-light);
+}
+
+/* Affichage du dropdown au survol */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive - Ajuste le menu sur mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+    }
+}

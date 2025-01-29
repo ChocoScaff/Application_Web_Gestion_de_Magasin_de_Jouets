@@ -1,6 +1,6 @@
 <?php
 include '..\backend\db.php';
-include 'includes\header.php';
+include './includes/header.php';
 ?>
 
 <!DOCTYPE html>

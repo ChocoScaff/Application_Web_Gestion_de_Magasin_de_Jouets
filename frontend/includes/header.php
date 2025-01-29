@@ -5,7 +5,7 @@ $base_url = '/Application_Web_Gestion_de_Magasin_de_Jouets/'; // Point de dépar
 <!DOCTYPE html>
 <html lang="fr">
 
-<link rel="stylesheet" href="../../assets/css/styles.css">  
+<link rel="stylesheet" href="../../assets/styles.css">  
 
 <head>
     <meta charset="UTF-8">

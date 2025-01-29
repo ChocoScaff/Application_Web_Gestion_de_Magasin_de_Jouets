@@ -2,7 +2,7 @@
 include '../../backend/fournisseurs.php';
 include '../includes/header.php';
 ?>
-<link rel="stylesheet" href="..\..\assets\css\styles.css">
+<link rel="stylesheet" href="../../assets/styles.css">
 
 <?php
 $fournisseurs = getFournisseurs();
