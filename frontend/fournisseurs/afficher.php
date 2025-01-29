@@ -1,6 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\tp-php\backend\fournisseurs.php';
-include 'C:\xampp\htdocs\tp-php\frontend\includes\header.php';
+include '../..\backend\fournisseurs.php';
+include '..\includes\header.php';
 ?>
 <link rel="stylesheet" href="..\assets\css\styles.css">
 

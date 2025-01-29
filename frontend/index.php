@@ -1,6 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\tp-php\backend\db.php';
-include 'C:\xampp\htdocs\tp-php\frontend\includes\header.php';
+include '..\backend\db.php';
+include 'includes\header.php';
 ?>
 
 <!DOCTYPE html>

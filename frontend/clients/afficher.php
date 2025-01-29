@@ -1,6 +1,6 @@
 <?php
-include 'C:\xampp\htdocs\tp-php\backend\clients.php';
-include 'C:\xampp\htdocs\tp-php\frontend\includes\header.php';
+include '../../backend/clients.php';
+include '../includes\header.php';
 $clients = getClients();
 ?>
 
@@ -27,4 +27,4 @@ $clients = getClients();
     </tr>
     <?php endforeach; ?>
 </table>
-<?php include 'C:\xampp\htdocs\tp-php\frontend\includes\footer.php'; ?>
+<?php include '../includes\footer.php'; ?>

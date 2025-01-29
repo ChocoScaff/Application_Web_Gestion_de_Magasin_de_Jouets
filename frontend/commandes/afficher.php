@@ -1,6 +1,6 @@
 <?php
-include 'C:\\xampp\\htdocs\\tp-php\\backend\\commandes.php';
-include 'C:\\xampp\\htdocs\\tp-php\\frontend\\includes\\header.php';
+include '../../backend\\commandes.php';
+include '../includes\\header.php';
 
 $commandes = getCommandes(); // Récupérer toutes les commandes
 ?>

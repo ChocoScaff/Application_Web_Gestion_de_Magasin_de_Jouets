@@ -1,7 +1,7 @@
 <?php
-include 'C:\\xampp\\htdocs\\tp-php\\backend\\jouets.php';
-include 'C:\\xampp\\htdocs\\tp-php\\backend\\db.php';
-include 'C:\\xampp\\htdocs\\tp-php\\frontend\\includes\\header.php';
+include '../..\\backend\\jouets.php';
+include '../..\\backend\\db.php';
+include '../frontend\\includes\\header.php';
 
 // Vérifier si un ID est fourni
 if (!isset($_GET['id']) || empty($_GET['id'])) {

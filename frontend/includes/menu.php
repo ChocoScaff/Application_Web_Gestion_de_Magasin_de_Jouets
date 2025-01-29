@@ -3,37 +3,37 @@
 ?>
 <nav>
     <ul>
-        <li><a href="/tp-php/frontend/index.php">Accueil</a></li>
+        <li><a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/index.php">Accueil</a></li>
 
         <li class="dropdown">
-            <a href="/tp-php/frontend/jouets/afficher.php" class="dropbtn">Jouets</a>
+            <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/jouets/afficher.php" class="dropbtn">Jouets</a>
             <div class="dropdown-content">
-                <a href="/tp-php/frontend/jouets/ajouter.php">Ajouter un Jouet</a>
-                <a href="/tp-php/frontend/jouets/afficher.php">Voir tous les Jouets</a>
+                <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/jouets/ajouter.php">Ajouter un Jouet</a>
+                <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/jouets/afficher.php">Voir tous les Jouets</a>
             </div>
         </li>
 
         <li class="dropdown">
-            <a href="/tp-php/frontend/clients/afficher.php" class="dropbtn">Clients</a>
+            <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/clients/afficher.php" class="dropbtn">Clients</a>
             <div class="dropdown-content">
-                <a href="/tp-php/frontend/clients/ajouter.php">Ajouter un Client</a>
-                <a href="/tp-php/frontend/clients/afficher.php">Voir tous les Clients</a>
+                <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/clients/ajouter.php">Ajouter un Client</a>
+                <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/clients/afficher.php">Voir tous les Clients</a>
             </div>
         </li>
 
         <li class="dropdown">
-            <a href="/tp-php/frontend/commandes/afficher.php" class="dropbtn">Commandes</a>
+            <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/commandes/afficher.php" class="dropbtn">Commandes</a>
             <div class="dropdown-content">
-                <a href="/tp-php/frontend/commandes/creer.php">Créer une Commande</a>
-                <a href="/tp-php/frontend/commandes/afficher.php">Voir les Commandes</a>
+                <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/commandes/creer.php">Créer une Commande</a>
+                <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/commandes/afficher.php">Voir les Commandes</a>
             </div>
         </li>
 
         <li class="dropdown">
-            <a href="/tp-php/frontend/fournisseurs/afficher.php" class="dropbtn">Fournisseurs</a>
+            <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/fournisseurs/afficher.php" class="dropbtn">Fournisseurs</a>
             <div class="dropdown-content">
-                <a href="/tp-php/frontend/fournisseurs/ajouter.php">Ajouter un Fournisseur</a>
-                <a href="/tp-php/frontend/fournisseurs/afficher.php">Voir tous les Fournisseurs</a>
+                <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/fournisseurs/ajouter.php">Ajouter un Fournisseur</a>
+                <a href="/Application_Web_Gestion_de_Magasin_de_Jouets/frontend/fournisseurs/afficher.php">Voir tous les Fournisseurs</a>
             </div>
         </li>
     </ul>

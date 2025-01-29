@@ -1,6 +1,6 @@
 <?php
 // En-tête HTML commun
-$base_url = '/tp-php/'; // Point de départ du projet
+$base_url = '/Application_Web_Gestion_de_Magasin_de_Jouets/'; // Point de départ du projet
 ?>
 <!DOCTYPE html>
 <html lang="fr">

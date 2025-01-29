@@ -1,9 +1,9 @@
 <?php
-include 'C:\\xampp\\htdocs\\tp-php\\backend\\jouets.php';
-include 'C:\\xampp\\htdocs\\tp-php\\backend\\clients.php';
-include 'C:\\xampp\\htdocs\\tp-php\\backend\\db.php';
-include 'C:\\xampp\\htdocs\\tp-php\\backend\\commandes.php';
-include 'C:\\xampp\\htdocs\\tp-php\\frontend\\includes\\header.php';
+include '../../backend\\jouets.php';
+include '../../backend\\clients.php';
+include '../../backend\\db.php';
+include '../../backend\\commandes.php';
+include '../includes\\header.php';
 
 $clients = getClients(); // Récupérer la liste des clients
 $jouets = getJouets();   // Récupérer la liste des jouets
