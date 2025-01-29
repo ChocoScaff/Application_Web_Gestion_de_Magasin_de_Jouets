@@ -39,5 +39,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <p>Fournisseur introuvable.</p>
 <?php endif; ?>
 <?php include 'C:\xampp\htdocs\tp-php\frontend\includes\footer.php'; ?>
-
-

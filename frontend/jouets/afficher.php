@@ -2,7 +2,7 @@
 include 'C:\xampp\htdocs\tp-php\frontend\includes\header.php';
 include 'C:\xampp\htdocs\tp-php\backend\jouets.php';
 ?>
-<link rel="stylesheet" href="../../assets/styles.css">
+<link rel="stylesheet" href="../assets/styles.css">
 
 <section>
     <h2>Jouets disponibles :</h2>

@@ -1,57 +1,8 @@
-/* Variables et reset */
-:root {
-    --primary-color: #4CAF50;
-    --primary-dark: #45a049;
-    --secondary-color: #2196F3;
-    --text-color: #333;
-    --background-light: #f4f4f9;
-    --white: #ffffff;
-    --gray-light: #f1f1f1;
-    --gray: #ddd;
-    --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Base styles */
-body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-light);
-}
-
-/* Header et Navigation */
-header {
-    background: var(--white);
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header h1 {
-    color: var(--primary-color);
-    text-align: center;
-    padding: 1rem 0;
-    margin: 0;
-    font-size: 2.5rem;
-}
-
+/* Styles du menu */
 nav {
     background-color: var(--primary-color);
     padding: 1rem 0;
     transition: var(--transition);
-}
-
-nav.scrolled {
-    padding: 0.5rem 0;
-    box-shadow: var(--shadow);
 }
 
 nav ul {
@@ -60,8 +11,14 @@ nav ul {
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    position: relative;
 }
 
+nav ul li {
+    position: relative;
+}
+
+/* Liens du menu */
 nav ul li a {
     color: var(--white);
     text-decoration: none;
@@ -71,168 +28,47 @@ nav ul li a {
     transition: var(--transition);
 }
 
+/* Changement de couleur au survol */
 nav ul li a:hover {
     background-color: var(--white);
     color: var(--primary-color);
 }
 
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+/* Style du menu déroulant */
+.dropdown {
+    position: relative;
 }
 
-section {
-    background: var(--white);
-    border-radius: 8px;
-    padding: 2rem;
-    margin-bottom: 2rem;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 200px;
     box-shadow: var(--shadow);
-    transform: translateY(0);
+    border-radius: 4px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 0.8rem 1rem;
+    display: block;
     transition: var(--transition);
 }
 
-section:hover {
-    transform: translateY(-5px);
-}
-
-section h2 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    background: var(--white);
-    box-shadow: var(--shadow);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-th {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 1rem;
-    text-align: left;
-}
-
-td {
-    padding: 1rem;
-    border-bottom: 1px solid var(--gray);
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-tr:hover {
+.dropdown-content a:hover {
     background-color: var(--gray-light);
 }
 
-/* Forms */
-form {
-    max-width: 600px;
-    margin: 2rem auto;
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-label {
+/* Affichage du dropdown au survol */
+.dropdown:hover .dropdown-content {
     display: block;
-    margin: 1rem 0 0.5rem;
-    font-weight: 500;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-textarea,
-select {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 2px solid var(--gray);
-    border-radius: 4px;
-    transition: var(--transition);
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-button,
-input[type="submit"] {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: var(--transition);
-    width: 100%;
-    font-size: 1rem;
-    margin-top: 1rem;
-}
-
-button:hover,
-input[type="submit"]:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-}
-
-/* Links */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-a:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
-}
-
-/* Messages */
-.message {
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 4px;
-    text-align: center;
-    font-weight: 500;
-}
-
-.success {
-    background-color: #dff0d8;
-    color: #3c763d;
-    border: 1px solid #d6e9c6;
-}
-
-.error {
-    background-color: #f2dede;
-    color: #a94442;
-    border: 1px solid #ebccd1;
-}
-
-/* Footer */
-footer {
-    background-color: var(--text-color);
-    color: var(--white);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-/* Responsive Design */
+/* Responsive - Ajuste le menu sur mobile */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -240,16 +76,9 @@ footer {
         gap: 1rem;
     }
 
-    header h1 {
-        font-size: 2rem;
-    }
-
-    table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    form {
-        padding: 1rem;
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
     }
 }
