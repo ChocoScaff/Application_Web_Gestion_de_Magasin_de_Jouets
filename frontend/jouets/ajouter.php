@@ -1,6 +1,6 @@
 <?php
-include '../../backend\jouets.php'; // Inclusion correcte du backend
-include '..\includes\header.php';
+include '../../backend/jouets.php'; // Inclusion correcte du backend
+include '../includes/header.php';
 
 $message = ""; // Variable pour afficher un message à l'utilisateur
 
@@ -62,4 +62,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Ajouter</button>
 </form>
 
-<?php include 'C:\xampp\htdocs\tp-php\frontend\includes\footer.php'; ?>
+<?php include '..\includes\footer.php'; ?>

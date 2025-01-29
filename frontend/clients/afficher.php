@@ -4,6 +4,8 @@ include '../includes\header.php';
 $clients = getClients();
 ?>
 
+<link rel="stylesheet" href="..\..\assets\styles.css">
+
 <h1>Liste des Clients</h1>
 <table border="1">
     <tr>

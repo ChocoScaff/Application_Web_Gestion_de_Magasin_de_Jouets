@@ -2,7 +2,7 @@
 include '..\includes\header.php';
 include '../..\backend\jouets.php';
 ?>
-<link rel="stylesheet" href="../assets/styles.css">
+<link rel="stylesheet" href="../../assets/styles.css">
 
 <section>
     <h2>Jouets disponibles :</h2>
@@ -31,5 +31,5 @@ include '../..\backend\jouets.php';
 </section>
 
 <?php
-include 'C:\xampp\htdocs\tp-php\frontend\includes\footer.php';
+include '..\includes\footer.php';
 ?>

@@ -23,4 +23,4 @@ $commandes = getCommandes(); // Récupérer toutes les commandes
     <?php endforeach; ?>
 </table>
 
-<?php include 'C:\\xampp\\htdocs\\tp-php\\frontend\\includes\\footer.php'; ?>
+<?php include '..\\includes\\footer.php'; ?>

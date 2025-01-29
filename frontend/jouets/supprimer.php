@@ -1,7 +1,7 @@
 <?php
-include '../..\\backend\\jouets.php';
-include '../../backend\\db.php';
-include '..\\includes\\header.php';
+include '../../backend/jouets.php';
+include '../../backend/db.php';
+include '../includes/header.php';
 
 // Vérifier si un ID est fourni
 if (!isset($_GET['id']) || empty($_GET['id'])) {
@@ -32,4 +32,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm'])) {
     <a href="/tp-php/frontend/jouets/afficher.php">Annuler</a>
 </form>
 
-<?php include 'C:\\xampp\\htdocs\\tp-php\\frontend\\includes\\footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
